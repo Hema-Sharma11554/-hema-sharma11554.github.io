@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemlata Sharma | Business Analyst Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e1a;--bg2:#11162a;--card:#161c33;--border:#232a4a;--primary:#5b6cff;--primary2:#8b5cf6;--text:#eef2ff;--muted:#94a3d4;--accent:#00e5cc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.hero{position:relative;padding:28px 0 56px;background:radial-gradient(800px 500px at 20% -10%,rgba(91,108,255,0.25),transparent),radial-gradient(600px 400px at 90% 0%,rgba(139,92,246,0.2),transparent),var(--bg)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{font-weight:800;display:flex;align-items:center;gap:10px;letter-spacing:-0.02em}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700}
+.nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px;font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:14px;transition:.2s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:white;box-shadow:0 8px 24px rgba(91,108,255,.35)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:var(--border);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--primary)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(0,229,204,.1);border:1px solid rgba(0,229,204,.2);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.04em;margin-bottom:18px}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(0,229,204,.2)}
+.h1{font-size:52px;line-height:0.95;letter-spacing:-0.03em;font-weight:800;margin-bottom:16px}
+.h1 span{background:linear-gradient(135deg,var(--primary),var(--primary2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.lead{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:28px;margin-top:32px;padding-top:28px;border-top:1px solid var(--border)}
+.stat b{font-size:22px;display:block}
+.stat span{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.hero-card{background:linear-gradient(180deg,var(--card),#12172c);border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.06em}
+.section{padding:72px 0}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;font-weight:600}
+.h2{font-size:32px;letter-spacing:-0.02em;font-weight:800;line-height:1.1;margin-bottom:12px}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.proj{background:linear-gradient(180deg,var(--card),#12172c);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.proj:hover{transform:translateY(-4px);border-color:rgba(91,108,255,.4)}
+.proj-img{height:148px;background:linear-gradient(135deg,#1e2550,#2a1f5a);position:relative;display:grid;place-items:center}
+.proj-img span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#aab3ff;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.1)}
+.proj-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.proj-body h3{font-size:15px;line-height:1.3;margin-bottom:6px;font-weight:700}
+.proj-body p{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:12px;flex:1}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{font-size:10px;padding:4px 8px;border-radius:999px;background:rgba(91,108,255,.12);border:1px solid rgba(91,108,255,.2);color:#aab3ff;font-weight:600}
+.proj-link{font-size:12px;font-weight:600;color:var(--primary)}
+.footer{padding:32px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--border);display:flex;justify-content:space-between;margin-top:24px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr 1fr}.h1{font-size:38px}.nav-links{display:none}}
+@media(max-width:600px){.project-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="container">
+<nav class="nav">
+<div class="logo"><div class="logo-mark">HS</div> HEMLATA SHARMA</div>
+<div class="nav-links"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<div style="display:flex;gap:10px">
+<a class="btn btn-ghost" href="mailto:hema.sharma@gmx.com">Email</a>
+<a class="btn btn-primary" href="https://www.linkedin.com/in/hemlataa-sharrma/" target="_blank">LinkedIn →</a>
+</div>
+</nav>
+<div class="hero-grid">
+<div>
+<div class="badge"><span class="badge-dot"></span> OPEN TO BUSINESS ANALYST / DATA ANALYST ROLES • DELHI</div>
+<h1 class="h1">Business Analyst turning messy data into <span>clear retention strategies</span></h1>
+<p class="lead">MBA Business Analyst focused on HR Analytics, Churn Analysis & Sales Performance. I build Power BI stories with predictive flags using SQL, Python, SSMS & Microsoft Fabric — delivered 39.5% culture-driven attrition insight for Ogul India.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">View 7 Projects ↓</a>
+<a class="btn btn-ghost" href="mailto:hema.sharma@gmx.com?subject=Interview%20Opportunity%20for%20Business%20Analyst&body=Hi%20Hemlata,%0AWe%20saw%20your%20portfolio%20at%20hema-sharma11554.github.io">📧 Email Me</a>
+<a class="btn btn-ghost" href="Hema_Sharma_Resume.pdf" download>📄 Resume</a>
+</div>
+<div class="stats">
+<div class="stat"><b>7</b><span>Projects</span></div>
+<div class="stat"><b>39.5%</b><span>Culture Driver Found</span></div>
+<div class="stat"><b>MBA</b><span>Business Analyst</span></div>
+</div>
+</div>
+<div class="hero-card">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><div style="display:flex;gap:6px"><div style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></div><div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></div><div style="width:10px;height:10px;border-radius:50%;background:#27c93f"></div></div><span class="mono">PORTFOLIO • LIVE • v2</span></div>
+<div style="display:flex;gap:14px;align-items:center;margin:18px 0"><div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;font-weight:800;font-size:22px">HS</div><div><b style="font-size:14px">Hemlata Sharma</b><br><span class="mono">BUSINESS ANALYST • MBA • DELHI</span></div></div>
+<div style="background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:14px">
+<div class="mono" style="margin-bottom:8px">KEY IMPACT • VERIFIED</div>
+<div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--muted)">Early attrition driver</span><b style="color:var(--accent)">39.5% culture</b></div>
+<div style="display:flex;justify-content:space-between;font-size:13px;margin-top:6px"><span style="color:var(--muted)">High-risk staff flagged</span><b>10 profiles</b></div>
+<div style="display:flex;justify-content:space-between;font-size:13px;margin-top:6px"><span style="color:var(--muted)">Bank Churn Rate</span><b>20.4% • 2,037 lost</b></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:10px"><b style="font-size:12px">Power BI + Fabric</b><br><span style="font-size:11px;color:var(--muted)">Storytelling dashboards</span></div>
+<div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:10px"><b style="font-size:12px">SQL • Python</b><br><span style="font-size:11px;color:var(--muted)">SSMS, DAX, Pandas</span></div>
+</div>
+<div style="margin-top:14px;display:flex;gap:8px">
+<a href="mailto:hema.sharma@gmx.com" class="btn btn-primary" style="flex:1;justify-content:center;padding:10px">Hire Me →</a>
+<a href="https://github.com/Hema-Sharma11554" target="_blank" class="btn btn-ghost" style="flex:1;justify-content:center;padding:10px">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<section id="projects" class="section">
+<div class="container">
+<div class="eyebrow">Selected Work — 7 Projects Live on GitHub</div>
+<h2 class="h2">From HR attrition to Blinkit delivery</h2>
+<p style="color:var(--muted);max-width:680px">All projects have Power BI / Python code + dashboards. Click View Project to see repo. Add screenshots to README for maximum recruiter impact.</p>
+<div class="project-grid">
+<div class="proj"><div class="proj-img"><span>HR ANALYTICS • OGUL INDIA</span></div><div class="proj-body"><h3>1. Ogul India — Attrition & Retention</h3><p>39.5% culture driver found, 10 high-risk flags. Power BI story with predictive risk model.</p><div class="tag-row"><span class="tag">Power BI</span><span class="tag">HR Analytics</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>CLARTE • 797 EMPLOYEES</span></div><div class="proj-body"><h3>2. Clarte Global Workforce Gap</h3><p>797 employees global tracking, manager vs non-manager gap (341 vs 94), workforce planning.</p><div class="tag-row"><span class="tag">Workforce</span><span class="tag">Planning</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554/clarte_hr_analysis" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>BANK CHURN • 20.4%</span></div><div class="proj-body"><h3>3. Bank Customer Churn</h3><p>10K customers, 2,037 lost, France geo & Age>50 ~35% driver. Power BI retention playbook.</p><div class="tag-row"><span class="tag">Churn</span><span class="tag">Power BI</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554/bank-customer-churn-data-analysis" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>HELIX • GLOBAL KPIs</span></div><div class="proj-body"><h3>4. Helix Global Performance</h3><p>Executive KPI dashboard tracking regional trends, efficiency drivers for data-driven decisions.</p><div class="tag-row"><span class="tag">KPIs</span><span class="tag">Performance</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>CRM • SALES</span></div><div class="proj-body"><h3>5. CRM Sales Dashboard</h3><p>End-to-end sales analytics with KPI tiles, monthly trends and product mix driving revenue.</p><div class="tag-row"><span class="tag">Sales</span><span class="tag">CRM</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>PYTHON • BLINKIT EDA</span></div><div class="proj-body"><h3>6. Blinkit Grocery Analysis</h3><p>Python EDA on delivery data: sales trends, category performance, delivery patterns & revenue drivers.</p><div class="tag-row"><span class="tag">Python</span><span class="tag">EDA</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554" target="_blank">View on GitHub →</a></div></div>
+<div class="proj"><div class="proj-img"><span>RETAIL • COFFEE</span></div><div class="proj-body"><h3>7. Coffee Shop Sales</h3><p>Hourly sales, product mix, store performance and growth opportunities deep-dive.</p><div class="tag-row"><span class="tag">Retail</span><span class="tag">Revenue</span></div><a class="proj-link" href="https://github.com/Hema-Sharma11554" target="_blank">View on GitHub →</a></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section" style="background:var(--bg2);border-top:1px solid var(--border)">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;background:linear-gradient(135deg,var(--card),#12172c);border:1px solid var(--border);border-radius:20px;padding:32px">
+<div>
+<div class="eyebrow">Contact</div>
+<h2 class="h2">Open to Business Analyst roles</h2>
+<p style="color:var(--muted);margin:12px 0 20px">Delhi, India • Remote/Hybrid • MBA • Power BI • SQL • Python • HR Analytics</p>
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+<a class="btn btn-primary" href="mailto:hema.sharma@gmx.com?subject=Interview%20Invite%20-%20Business%20Analyst&body=Hi%20Hemlata,%0AWe%20liked%20your%20portfolio%20https://hema-sharma11554.github.io/%0A">📧 hema.sharma@gmx.com</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/hemlataa-sharrma/" target="_blank">🔗 linkedin.com/in/hemlataa-sharrma</a>
+<a class="btn btn-ghost" href="https://github.com/Hema-Sharma11554" target="_blank">💻 github.com/Hema-Sharma11554</a>
+</div>
+<div class="mono">PORTFOLIO: https://hema-sharma11554.github.io/ • LIVE v2</div>
+</div>
+<div style="background:rgba(0,0,0,.2);border:1px solid var(--border);border-radius:14px;padding:20px">
+<b>Next steps for you:</b>
+<ul style="margin:12px 0 0 18px;color:var(--muted);font-size:13px;line-height:1.8">
+<li>Upload your resume as <code>Hema_Sharma_Resume.pdf</code> to repo root — Download button will work</li>
+<li>Add 1 dashboard screenshot to each GitHub repo README</li>
+<li>Pin 6 repos on GitHub profile</li>
+<li>Add portfolio link to LinkedIn Featured</li>
+</ul>
+<div style="margin-top:16px;display:flex;gap:10px">
+<a class="btn btn-primary" href="mailto:hema.sharma@gmx.com" style="flex:1;justify-content:center">Email Me Now</a>
+<a class="btn btn-ghost" href="Hema_Sharma_Resume.pdf" download style="flex:1;justify-content:center">Download CV</a>
+</div>
+</div>
+</div>
+<div class="footer"><span>© 2026 Hemlata Sharma • Built for Business Analyst interviews</span><span>hema-sharma11554.github.io • Delhi</span></div>
+</div>
+</section>
+</body>
+</html>
